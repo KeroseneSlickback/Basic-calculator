@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'VT323', monospace;
+}
+
+#body {
+	background-color: #c2d2e1;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#header {
+	background-color: #084890;
+	color: #f8fafc;
+	text-shadow: 5px 5px 0px black;
+	font-size: 2rem;
+	width: 700px;
+	margin-top: 30px;
+	border-radius: 10px;
+	box-shadow: 4px 4px 0px 4px black;
+}
+
+#title,
+#subtitle {
+	margin: 10px 20px;
+}
+
+#section {
+	margin-top: 20px;
+}
+
+#section {
+	background-color: #084887;
+	border-radius: 10px;
+	box-shadow: 4px 4px 0px 4px black;
+}
+
+#container {
+	height: 600px;
+	width: 500px;
+	padding: 25px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	gap: 12px;
+	grid-template-areas:
+		'out out out out'
+		'num7 num8 num9 div'
+		'num4 num5 num6 multi'
+		'num1 num2 num3 minus'
+		'clear num0 point plus'
+		'clear equal equal plus';
+}
+
+#container > * {
+	background-color: #f8fafc;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: 5px 5px 0px black;
+}
+
+#container > button {
+	font-size: 3.3rem;
+	transition: 0.075s ease;
+}
+
+#container > button:active {
+	transform: translate(3px, 3px);
+}
+
+#output {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	flex-direction: column;
+	border: 1px solid black;
+	grid-area: out;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+#previous-operand,
+#current-operand {
+	transition: 0.5s;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+#previous-operand {
+	font-size: 2.75rem;
+	font-weight: 400;
+}
+
+#current-operand {
+	font-size: 5rem;
+	font-weight: 400;
+}
+
+#sevenbtn {
+	grid-area: num7;
+}
+#eightbtn {
+	grid-area: num8;
+}
+#ninebtn {
+	grid-area: num9;
+}
+#dividebtn {
+	grid-area: div;
+}
+
+#fourbtn {
+	grid-area: num4;
+}
+#fivebtn {
+	grid-area: num5;
+}
+#sixbtn {
+	grid-area: num6;
+}
+#multiplybtn {
+	grid-area: multi;
+}
+
+#onebtn {
+	grid-area: num1;
+}
+#twobtn {
+	grid-area: num2;
+}
+#threebtn {
+	grid-area: num3;
+}
+#minusbtn {
+	grid-area: minus;
+}
+
+#zerobtn {
+	grid-area: num0;
+}
+#dubzerobtn {
+	grid-area: num00;
+}
+#pointbtn {
+	grid-area: point;
+}
+
+#acbtn {
+	grid-area: clear;
+}
+#equalsbtn {
+	grid-area: equal;
+}
+#plusbtn {
+	grid-area: plus;
+}
+
+@media only screen and (max-width: 750px) {
+	#header {
+		max-width: calc(100vw - 50px);
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	#container {
+		width: calc(100vw - 50px);
+	}
+}
+
+.is-depressed {
+	color: red;
+}

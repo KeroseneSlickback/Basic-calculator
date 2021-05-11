@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Basic Calculator</h1>
+
+<body id="body">
+  <header id="header">
+    <h1 id="title">Perfectly Normal Calculator</h1>
+    <!-- <h2 id="subtitle">I promise. ;)</h2> -->
   </header>
-  <section id="#section">
-    <div id="#calculator">
-      <div id="#container">
-        <input id="input" type="text">
+  <section id="section">
+    <div id="container">
+      <div id="output">
+        <!-- <div id="previous-operand" data-previous-operand></div> -->
+        <div id="current-operand" data-operand>0</div>
       </div>
+      <button id="dividebtn" data-operation>÷</button>
+      <button id="multiplybtn" data-operation>×</button>
+      <button id="minusbtn" data-operation>−</button>
+      <button id="plusbtn" data-operation>+</button>
+      <button id="equalsbtn" data-equals>=</button>
+      <button id="acbtn" data-all-clear>AC</button>
+
+      <button id="pointbtn" data-number>.</button>
+      <button id="ninebtn" data-number>9</button>
+      <button id="eightbtn" data-number>8</button>
+      <button id="sevenbtn" data-number>7</button>
+      <button id="sixbtn" data-number>6</button>
+      <button id="fivebtn" data-number>5</button>
+      <button id="fourbtn" data-number>4</button>
+      <button id="threebtn" data-number>3</button>
+      <button id="twobtn" data-number>2</button>
+      <button id="onebtn" data-number>1</button>
+      <button id="zerobtn" data-number>0</button>
     </div>
   </section>
   <script src="app.js"></script>
 </body>
+
 </html>
